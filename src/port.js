@@ -28,7 +28,7 @@
     addShip(ship) {
       this.ships.push(ship);
     }
-    
+
     removeShip(ship) {
       this.ships = this.ships.filter(dockedShip => dockedShip !== ship);
       console.log(ship);
@@ -44,7 +44,7 @@
   const titanic = {name: 'Titanic'};
   const queenMary = {name: 'Queen Mary'};
 
-}());
+})();
 
 // const port = new Port('Dover');
 // const titanic = {name: 'Titanic'};
