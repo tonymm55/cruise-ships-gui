@@ -1,11 +1,12 @@
-class Ship {
+(function exportShip() {
+  class Ship {
     constructor(_itinerary) {
       this.itinerary = _itinerary;
       this.currentPort = _itinerary.ports[0];
       this.previousPort = null
       this.currentPort.addShip(this);
     } 
-// methods:
+  // methods:
     setSail() {
       const itinerary = this.itinerary;
       const currentPortIndex = itinerary.ports.indexOf(this.currentPort);
@@ -19,13 +20,19 @@ class Ship {
       this.previousPort = this.currentPort;
       this.currentPort = null;
     }
-    
     shipDock() {
       const itinerary = this.itinerary;
       const previousPortIndex = itinerary.ports.indexOf(this.previousPort);
       this.currentPort = itinerary.ports[previousPortIndex + 1];
       this.currentPort.addShip(this);
     }
-  };
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Ship;
+  } else {
+    window.Ship = Ship;
+  }
+  
+}());
 
-module.exports = Ship;
+// module.exports = Ship;

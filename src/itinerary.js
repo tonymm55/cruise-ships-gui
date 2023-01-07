@@ -1,9 +1,18 @@
-class Itinerary {
+(function exportItinerary() {
+  class Itinerary {
     constructor(_ports) {
       this.ports = _ports;
       console.log(_ports);
-    //   this.numPassengers = numPassengers;
     } 
+  }
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Itinerary;
+  } else {
+    window.Itinerary = Itinerary;
+  }
+}());  
+
 // // methods:
 //     setSail() {
 //       this.currentPort = 'Dover';
@@ -11,10 +20,9 @@ class Itinerary {
 //     shipDock(port) {
 //       this.currentPort = port;
 //     }
-  }
 
 // const ship = new Ship('Dover');
 
 // ship.setSail();
 
-module.exports = Itinerary;
+// module.exports = Itinerary;
