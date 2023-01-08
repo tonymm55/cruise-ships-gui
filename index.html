@@ -7,15 +7,25 @@
     <title>Cruise Ships</title>
     <link rel="stylesheet" href="css/normalize1.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"
+    />
 </head>
 <body>
     <div id = "viewport"> 
       <div id = "ports">
       </div>
+      <div id = "ship"></div>
+      <button id = "sailbutton">Set Sail!</button>
     </div>
     <script src = "src/controller.js"></script>
     <script src = "src/port.js"></script>
     <script src = "src/itinerary.js"></script>
+    <script src = "src/ship.js"></script>
     <script>
         
         const itinerary = new Itinerary([
@@ -24,10 +34,11 @@
             new Port('San Juan'),
             new Port('Amber Cove')
         ]) 
-        // const ship = new Ship(itinerary);
+        const ship = new Ship(itinerary);
         const controller = new Controller();
 
         controller.renderPorts(itinerary.ports);
+        controller.renderShip(ship);
     </script>
 </body>
 </html>

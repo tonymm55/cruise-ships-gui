@@ -2,7 +2,7 @@
   class Controller {
         constructor() {
             this.initialiseSea();
-            // this.ship = ship;
+            this.ship = ship;
         }
         
         initialiseSea() {
@@ -18,11 +18,11 @@
             }, 1000);
         }
 
-        renderPorts (ports) {
+        renderPorts(ports) {
           const portsElement = document.querySelector('#ports');
           portsElement.style.width = '0px';
         
-            
+            // This section needs a review, esp line 26! 
             ports.forEach((port, index) => {
               const newPortElement = document.createElement('div');
               newPortElement.className = 'port';
@@ -34,6 +34,17 @@
               const portsElementWidth = parseInt(portsElement.style.width, 10);
               portsElement.style.width = `${portsElementWidth + 256}px`;
             });
+        }
+
+        renderShip() {
+          // this.ship = ship
+
+          const shipPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+          const portElement = document.querySelector(`[data-port-index='${shipPortIndex}']`); 
+          
+          const shipElement = document.querySelector('#ship');
+          shipElement.style.top = `${portElement.offsetTop + 32}px`;
+          shipElement.style.left = `${portElement.offsetLeft - 32}px`;
         }
     }
   if (typeof module !== 'undefined' && module.exports) {
