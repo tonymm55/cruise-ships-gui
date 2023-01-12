@@ -22,6 +22,7 @@
       <div id = "ship"></div>
       <button id = "sailbutton">Set Sail!</button>
     </div>
+    <button id = "sailbutton">Set Sail outside of viewport!</button>
     <script src = "src/controller.js"></script>
     <script src = "src/port.js"></script>
     <script src = "src/itinerary.js"></script>
@@ -33,7 +34,7 @@
             new Port('Grand Turk'),
             new Port('San Juan'),
             new Port('Amber Cove')
-        ]) 
+        ]);
         const ship = new Ship(itinerary);
         const controller = new Controller(ship);
 

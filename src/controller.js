@@ -1,13 +1,13 @@
 (function exportController() {
   class Controller {
-        constructor() {
-            this.ship = ship;
-            this.initialiseSea();
+        constructor(ship) {
+          this.ship = ship;
+          this.initialiseSea();
 
-            document.querySelector('#sailbutton').addEventListener('click', () => {
-              this.setSail();
-            });
-          }
+          document.querySelector('#sailbutton').addEventListener('click', () => {
+            this.setSail();
+          });
+        }
         
         initialiseSea() {
             const backgrounds = [
@@ -22,12 +22,12 @@
             }, 1000);
         }
 
-        renderPorts(ports) {
+        renderPorts(_ports) {
           const portsElement = document.querySelector('#ports');
           portsElement.style.width = '0px';
         
             // This section needs a review, esp line 26! 
-            ports.forEach((port, index) => {
+            _ports.forEach((port, index) => {
               const newPortElement = document.createElement('div');
               newPortElement.className = 'port';
            
@@ -55,25 +55,33 @@
         setSail() {
           this.ship = ship
 
-          const currentPortIndex = ship.itinerary.ports.indexOf(ship.currentPort);
+          const currentPortIndex = this.ship.itinerary.ports.indexOf(ship.currentPort);
+
           const nextPortIndex = currentPortIndex + 1;
+
           const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}"]`); 
           
           if (!nextPortElement) {
-            return alert('End of the line Mo Fo!!!!');
+            return alert('End of the line, Get Off!!!!');
           }
+
           const shipElement = document.querySelector('#ship');
+
+          
+            
+        ship.setSail();
           const sailInterval = setInterval(() => {
             const shipLeft = parseInt(shipElement.style.left, 10);
             if (shipLeft === (nextPortElement.offsetLeft - 32)) {
-            
-            ship.setSail();
-            ship.dock();
             clearInterval(sailInterval);
-          }
+            }
 
-          shipElement.style.left = `${shipLeft + 100}px`;
-          }, 20);
+            shipElement.style.left = `${shipLeft + 1}px`;
+            shipPosition +=1;
+          }, 10);
+          
+        ship.dock();
+
         }
       }
   
