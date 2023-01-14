@@ -25,13 +25,13 @@
       this.ships = [];
     }
   
-    addShip(ship) {
-      this.ships.push(ship);
+    addShip(_ship) {
+      this.ships.push(_ship);
     }
 
-    removeShip(ship) {
-      this.ships = this.ships.filter(dockedShip => dockedShip !== ship);
-      console.log(ship);
+    removeShip(_ship) {
+      this.ships = this.ships.filter(dockedShip => dockedShip !== _ship);
+      console.log(_ship);
     }
   }
 
@@ -40,12 +40,4 @@
   } else {
     window.Port = Port;
   }
-  const port = new Port('Dover');
-  const titanic = {name: 'Titanic'};
-  const queenMary = {name: 'Queen Mary'};
-
 })();
-
-// const port = new Port('Dover');
-// const titanic = {name: 'Titanic'};
-// const queenMary = {name: 'Queen Mary'};
