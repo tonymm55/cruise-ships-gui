@@ -14,10 +14,9 @@
         createHeadUpDisplay() {
           const headUpDisplay = document.createElement('div');
           headUpDisplay.id = 'headupdisplay';
-          headUpDisplay.innerHTML = `
-            <div id='currentport'></div>
-            <div id='nextport'></div>
-          `;
+          headUpDisplay.innerHTML = 
+            `<div id='currentport'></div>
+            <div id='nextport'></div>`;
           document.querySelector('#viewport').appendChild(headUpDisplay);
         }
 
@@ -105,8 +104,6 @@
           const nextPortElement = document.querySelector(`[data-port-index='${nextPortIndex}']`); 
           console.log(nextPortElement, "nextPortElement");
 
-          
-          
           if (!nextPortElement) {
             return this.renderMessage("End of Cruise, Goodbye!");
           }

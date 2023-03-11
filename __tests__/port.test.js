@@ -11,7 +11,6 @@ describe('Port constructor',() => {
   });
 
     it('can be instantiated', () => {
-      // const port = new Port('Dover');
       const itinerary = new Itinerary([port]);
       const ship = new Ship(itinerary);
 
@@ -25,8 +24,6 @@ describe('Port constructor',() => {
     });
 
     it('can add a ship', () => {
-      // const port = new Port('Dover');
-      // const ship = {}; "Objects passed into methods where those methods don't use the Object"
       const ship = jest.fn();
 
       port.addShip(ship);
@@ -36,8 +33,6 @@ describe('Port constructor',() => {
 
     it('can remove a ship', () => {
       const port = new Port('Dover');
-      // const titanic = {}; "An Object is passed into a method where the method does not use the Object"
-      // const queenMary = {};
       const titanic = jest.fn();
       const queenMary = jest.fn();
 
