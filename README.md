@@ -1,4 +1,4 @@
-# cruise-ships including gui module/option
+# Cruise-Ships Application including Graphical User Interface
 
 # Cruise ships project
 
