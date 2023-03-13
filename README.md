@@ -1,7 +1,5 @@
 # Cruise-Ships Application including Graphical User Interface
 
-# Cruise ships project
-
 A JavaScript project as part of the Software Engineering Fasttrack bootcamp at Command Shift (formerly Manchester Codes). I created the JavaScript code to simulate cruise ships sailing around the world and docking at ports along the way. As a latter stage of the project I added a Graphical User Interface to display the cruise ships, ports and journeys in the browser. The GUI includes a Head Up Display (HUD), but not the Form section. This will be completed at a later date.
 
 ## General info
@@ -11,7 +9,7 @@ The purpose of this project was to build upon the following skills and concepts:
 * Domain Modelling
 * User stories
 * Object-Oriented Programming
-* DRY
+* Do not Repeat Yourself (DRY)
 * Single Responsibility Principle
 * Dependency Inversion
 * Test doubles and test isolation
@@ -40,7 +38,7 @@ All of this is visually respresented by a Graphical User Interface, which includ
 
 ## Status
 
-Project status: _In progress. Form to be added. This was optional.
+Project status: Currently in development. Form feature to be added. 
 
 ## Contributors
 
