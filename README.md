@@ -2,6 +2,8 @@
 
 A JavaScript project as part of the Software Engineering Fasttrack bootcamp at Command Shift (formerly Manchester Codes). I created the JavaScript code to simulate cruise ships sailing around the world and docking at ports along the way. As a latter stage of the project I added a Graphical User Interface to display the cruise ships, ports and journeys in the browser. The GUI includes a Head Up Display (HUD), but not the Form section. This will be completed at a later date.
 
+![Graphical User Interface](./images/gui.png)
+
 ## General info
 
 The purpose of this project was to build upon the following skills and concepts:
